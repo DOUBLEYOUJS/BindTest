@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    kapt "com.google.auto.service:auto-service:1.0-rc4"
+    implementation "com.google.auto.service:auto-service:1.0-rc4"
+    implementation 'com.squareup:kotlinpoet:1.4.0'
+
+    implementation project(':lib_annotations')
+
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
